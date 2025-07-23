@@ -11,10 +11,11 @@ document.getElementById("checkout-form").addEventListener("submit", async functi
   formData.append("amount", amount);
 
   try {
-    await fetch("https://script.google.com/macros/s/AKfycbwTF-siO0qUn2BFTzfyWs2SUTDsa6v719XHjMBwb1ezq-q3pd-XCINYCoJGcypP-UOB/exec", {
-      method: "POST",
-      body: formData,
-    });
+    await fetch("https://sheetdb.io/api/v1/abcd1234", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ data: { name, email, amount } })
+});
 
     // Chuyển sang Momo sau khi gửi xong
     window.location.href = "https://nhantien.momo.vn/phapok0";
