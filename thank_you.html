@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1e1e2f);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      animation: fadeInBody 1.2s;
+    }
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .background-overlay {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      top: 0; left: 0;
+      background: radial-gradient(circle at top left, #4e00ff44, transparent 70%),
+                  radial-gradient(circle at bottom right, #00fff744, transparent 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .message {
+      position: relative;
+      z-index: 1;
+      background: rgba(20, 20, 30, 0.92);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      box-shadow: 0 0 24px #111a;
+      padding: 48px 36px 36px 36px;
+      text-align: center;
+      min-width: 340px;
+      animation: popIn 0.7s;
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.85); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .message .icon {
+      font-size: 54px;
+      margin-bottom: 18px;
+      display: inline-block;
+      animation: tada 1.2s;
+      filter: drop-shadow(0 0 8px #00f2ff88);
+    }
+    @keyframes tada {
+      0% { transform: scale(0.7) rotate(-10deg);}
+      60% { transform: scale(1.15) rotate(10deg);}
+      100% { transform: scale(1) rotate(0);}
+    }
+    .message h1 {
+      font-size: 32px;
+      color: #00f2ff;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-shadow: 0 0 8px #00f2ff55;
+    }
+    .message p {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #ccc;
+      margin-bottom: 24px;
+    }
+    .message a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #00f2ff, #4e00ff);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 2px 12px #00f2ff33;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .message a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 24px #00f2ff66;
+      background: linear-gradient(135deg, #4e00ff, #00f2ff);
+    }
+  </style>
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <div class="message">
+    <div class="icon">🎉</div>
+    <h1>Thank you for your order!</h1>
+    <p>We've received your information.<br>
+    You may now close this window or return to the homepage.</p>
+    <a href="index.html">← Back to Home</a>
+  </div>
+</body>
+</html>
