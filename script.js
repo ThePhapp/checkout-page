@@ -9,7 +9,7 @@ document.getElementById("checkout-form").addEventListener("submit", async functi
 
   try {
     // Gửi dữ liệu tới Google Apps Script
-    await fetch("https://script.google.com/macros/s/AKfycbznOD0xeGFYzyEVld-58hBLDOSxio28r6fPygqVjrDqc1_wo0xwW9p2C7EcwR3D1ra7GQ/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbwTF-siO0qUn2BFTzfyWs2SUTDsa6v719XHjMBwb1ezq-q3pd-XCINYCoJGcypP-UOB/exec", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
