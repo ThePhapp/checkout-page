@@ -11,7 +11,7 @@ document.getElementById("checkout-form").addEventListener("submit", async functi
   formData.append("amount", amount);
 
   try {
-    await fetch("https://sheetdb.io/api/v1/abcd1234", {
+    await fetch("https://sheetdb.io/api/v1/jk595chfbj8m2", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ data: { name, email, amount } })
