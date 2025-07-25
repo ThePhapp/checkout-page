@@ -4,7 +4,7 @@ body {
   background: linear-gradient(135deg, #0f0f0f, #1e1e2f);
   color: #fff;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +33,7 @@ body {
   backdrop-filter: blur(20px);
   padding: 30px;
   border-radius: 18px;
-  width: 500px; /* Tăng kích thước chiều rộng */
+  width: 700px; /* Tăng kích thước chiều rộng */
   text-align: center;
   box-shadow: 0 0 20px #111;
   transition: transform 0.3s ease;
@@ -185,4 +185,35 @@ h1 {
 }
 .social-icons a img:hover {
   transform: scale(1.15);
+}
+
+.qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 28px 0 18px 0;
+}
+
+.qr-img {
+  max-width: 220px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #00f2ff55, 0 2px 16px #0003;
+  border: 2px solid #00f2ff;
+  background: #181c2f;
+  transition: box-shadow 0.3s;
+}
+
+.qr-img:hover {
+  box-shadow: 0 0 32px #00f2ffcc, 0 2px 16px #0006;
+  border-color: #ffd700;
+}
+
+.qr-caption {
+  color: #00f2ff;
+  font-size: 14px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #00f2ff55;
+  font-weight: bold;
 }

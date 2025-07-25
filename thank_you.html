@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Thank You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
@@ -13,8 +14,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      overflow: auto;
       position: relative;
       animation: fadeInBody 1.2s;
     }
@@ -42,6 +43,7 @@
       padding: 48px 36px 36px 36px;
       text-align: center;
       min-width: 340px;
+      max-width: 95vw;
       animation: popIn 0.7s;
     }
     @keyframes popIn {
@@ -72,6 +74,14 @@
       margin-top: 10px;
       color: #ccc;
       margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .checkmark {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 12px;
+      animation: popIn 0.8s;
     }
     .message a {
       display: inline-block;
@@ -91,15 +101,32 @@
       box-shadow: 0 4px 24px #00f2ff66;
       background: linear-gradient(135deg, #4e00ff, #00f2ff);
     }
+    @media (max-width: 480px) {
+      .message {
+        padding: 28px 8vw 24px 8vw;
+        min-width: unset;
+      }
+      .message h1 { font-size: 22px; }
+      .message p { font-size: 15px; }
+    }
   </style>
 </head>
 <body>
   <div class="background-overlay"></div>
   <div class="message">
+    <span class="checkmark">
+      <svg viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22" stroke="#00f2ff" stroke-width="4" fill="#181c2f"/>
+        <path d="M14 25.5L22 33L34 17" stroke="#ffd700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
     <div class="icon">🎉</div>
     <h1>Thank you for your order!</h1>
-    <p>We've received your information.<br>
-    You may now close this window or return to the homepage.</p>
+    <p>
+      We've received your information.<br>
+      Your order is being processed.<br>
+      You may now close this window or return to the homepage.
+    </p>
     <a href="index.html">← Back to Home</a>
   </div>
 </body>
