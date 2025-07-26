@@ -33,7 +33,7 @@ body {
   backdrop-filter: blur(20px);
   padding: 30px;
   border-radius: 18px;
-  width: 700px; /* Tăng kích thước chiều rộng */
+  width: 700px;
   text-align: center;
   box-shadow: 0 0 20px #111;
   transition: transform 0.3s ease;

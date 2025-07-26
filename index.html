@@ -1,45 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Solo Leveling Notion Template</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solo Leveling Notion System</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0f1a, #1e1e2f 100%);
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #4b0082, #00ffff 80%);
+      padding: 2.5rem 1rem 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 24px #00f2ff22;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.7rem;
+      letter-spacing: 2px;
+      color: #ffd700;
+      text-shadow: 0 0 12px #00f2ff55;
+    }
+    .intro {
+      font-size: 1.25rem;
+      margin: 1.2rem auto 0.5rem auto;
+      max-width: 700px;
+      color: #e0e0e0;
+      text-shadow: 0 0 8px #0005;
+    }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1.2rem;
+      background: linear-gradient(90deg, #ffd700, #00f2ff);
+      color: #222;
+      padding: 0.9rem 2.2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.15rem;
+      box-shadow: 0 2px 12px #00f2ff33;
+      transition: transform 0.2s, box-shadow 0.2s;
+      letter-spacing: 1px;
+    }
+    .cta-btn:hover {
+      background: linear-gradient(90deg, #00f2ff, #ffd700);
+      color: #000;
+      transform: scale(1.07);
+      box-shadow: 0 4px 24px #ffd70066;
+    }
+    section {
+      padding: 2rem;
+      border-bottom: 1px solid #222;
+    }
+    section h2 {
+      color: #ffd700;
+      font-size: 1.35rem;
+      margin-bottom: 0.7rem;
+    }
+    .highlight {
+      color: #00ffff;
+      font-weight: bold;
+    }
+    .feature {
+      margin-bottom: 1.5rem;
+    }
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .product-card {
+      background-color: #1c1c2e;
+      padding: 1.5rem;
+      border-radius: 14px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 2px 16px #00f2ff22;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-card:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 32px #ffd70033;
+    }
+    .product-card h3 {
+      color: #ffd700;
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+    }
+    .product-card .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      color: #00ffff;
+      text-shadow: 0 0 8px #00f2ff55;
+    }
+    .product-card .buy-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #00ffff, #ffd700);
+      color: #222;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: 0.7rem;
+      box-shadow: 0 2px 12px #00f2ff33;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .product-card .buy-btn:hover {
+      background: linear-gradient(90deg, #ffd700, #00ffff);
+      color: #000;
+      transform: scale(1.07);
+    }
+    footer {
+      background-color: #1a1a2e;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 1rem;
+      color: #aaa;
+      letter-spacing: 1px;
+      box-shadow: 0 -2px 16px #00f2ff22;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 1.2rem;
+      }
+      .product-list {
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .product-card {
+        width: 98vw;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="background-overlay"></div>
 
-  <div class="card">
-    <span class="badge">Best Seller</span>
-    <img src="image/main.jpg" alt="Product" class="product-img" />
-
-    <h1>SOLO LEVELING <br><span class="highlight">NOTION</span></h1>
-    <p class="price">$19.99</p>
-    <p class="desc">
-      Gamified productivity system. Earn XP, level up, and unlock goals like a real hunter.
-    </p>
-
-    <form id="checkout-form" class="form">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Email" required />
-
-      <!-- QR code thanh toán đẹp hơn -->
-      <div class="qr-section">
-        <img src="image/fb.jpg" alt="QR Code" class="qr-img">
-        <div class="qr-caption">Scan QR to pay</div>
-      </div>
-
-      <button type="submit" class="buy-btn pulse-btn">BUY NOW</button>
-    </form>
-
-    <a href="#" class="wishlist">♡ Add to wishlist</a>
-    <div class="social-icons">
-      <a href="#"><img src="image/fb.jpg" alt="Facebook" /></a>
-      <a href="#"><img src="image/ig.jpg" alt="Instagram" /></a>
-      <a href="#"><img src="image/thread.jpg" alt="Thread" /></a>
+  <header>
+    <h1>Solo Leveling Notion System</h1>
+    <div class="intro">
+      Transform your productivity into an epic adventure.<br>
+      <span class="highlight">Solo Leveling Notion</span> turns your daily tasks into quests, rewards, and real-life level-ups.<br>
+      Stop procrastinating. Start conquering. Become the hero of your own story!
     </div>
-  </div>
+    <a href="#buy-section" class="cta-btn">Get Started Now</a>
+  </header>
 
-  <script src="script.js"></script>
+  <section>
+    <h2>🧍‍♂️ PLAYER DASHBOARD</h2>
+    <div class="feature">Track your progress like an RPG character:</div>
+    <ul>
+      <li>View XP, gold, streaks, level, and rank</li>
+      <li>Log in daily or lose XP</li>
+      <li>See upcoming tasks and Boss battles</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>⚔️ QUESTS SYSTEM</h2>
+    <div class="feature">Gamify your calendar:</div>
+    <ul>
+      <li>Score tasks by difficulty and duration</li>
+      <li>Complete = XP & Gold. Skip = Penalties.</li>
+      <li>Track all progress in your Quest Log</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎁 REWARDS PAGE</h2>
+    <div class="feature">Turn Gold into guilt-free rest:</div>
+    <ul>
+      <li>Binge-watch guilt-free — after earning it</li>
+      <li>Customize your own reward costs</li>
+      <li>Feel like rest is a victory</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🌌 AWAKENING SECTION</h2>
+    <div class="feature">Your Why, revealed:</div>
+    <ul>
+      <li><span class="highlight">Vision:</span> Who you want to become</li>
+      <li><span class="highlight">Anti-Vision:</span> What happens if you don't change</li>
+      <li>Use both fear and desire to fuel action</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🔁 HABITS & HEATMAP</h2>
+    <div class="feature">Build & break streaks with consequences:</div>
+    <ul>
+      <li>Earn XP + Gold for habits</li>
+      <li>Miss a day? The chain resets</li>
+      <li>Unlock milestone punishments & rewards</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🚪 GATES & BOSSES</h2>
+    <div class="feature">Level up through epic challenges:</div>
+    <ul>
+      <li>Bosses unlock at XP milestones</li>
+      <li>Tasks are tougher and real-life relevant</li>
+      <li>Win = big rewards. Fail = XP loss</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎲 UNPREDICTABILITY ENGINE</h2>
+    <div class="feature">Keep things exciting and uncertain:</div>
+    <ul>
+      <li>Boss tasks can change randomly</li>
+      <li>Streak multipliers increase with consistency</li>
+      <li>Log in daily to see “what happens next”</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🌍 COMMUNITY MODE (BONUS)</h2>
+    <div class="feature">Join our Discord:</div>
+    <ul>
+      <li>Share your streaks and quests</li>
+      <li>Compete with other players</li>
+      <li>Grow in real life together</li>
+    </ul>
+  </section>
+
+  <section id="buy-section">
+    <h2>🛒 CHOOSE YOUR SOLO LEVELING PACKAGE</h2>
+    <div class="product-list">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <h3>Basic Package</h3>
+        <p>🎯 Access the core system<br>📘 Quest Log + Dashboard</p>
+        <div class="price">199,000₫</div>
+        <a href="checkout.html?product=basic" class="buy-btn">Buy Now</a>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <h3>Pro Package</h3>
+        <p>🚀 Bosses + Heatmap features<br>🎁 Personalized rewards page</p>
+        <div class="price">349,000₫</div>
+        <a href="checkout.html?product=pro" class="buy-btn">Buy Now</a>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <h3>Full Package</h3>
+        <p>🔥 All features + Discord VIP<br>🌌 Complete Awakening system</p>
+        <div class="price">499,000₫</div>
+        <a href="checkout.html?product=full" class="buy-btn" style="background:linear-gradient(90deg,#ffd700,#00ffff);color:#222;">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    💥 This is more than a template — it’s your transformation system.<br>
+    <span style="color:#ffd700;">Ready to level up?</span>
+  </footer>
+
 </body>
 </html>

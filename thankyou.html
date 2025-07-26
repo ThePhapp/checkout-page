@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đã Thanh Toán Thành Công</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f0f1a 60%, #1e2f3a 100%);
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      animation: fadeInBody 1s;
+    }
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .thankyou-box {
+      background: rgba(28,28,46,0.96);
+      padding: 2.5rem 2rem 2rem 2rem;
+      border-radius: 18px;
+      max-width: 420px;
+      box-shadow: 0 8px 32px #00f2ff33, 0 2px 16px #0003;
+      position: relative;
+      animation: popIn 0.7s;
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.85); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .checkmark {
+      display: inline-block;
+      width: 54px;
+      height: 54px;
+      margin-bottom: 10px;
+      animation: tada 1.2s;
+    }
+    @keyframes tada {
+      0% { transform: scale(0.7) rotate(-10deg);}
+      60% { transform: scale(1.15) rotate(10deg);}
+      100% { transform: scale(1) rotate(0);}
+    }
+    h1 {
+      color: #00ffff;
+      font-size: 2.1rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+      text-shadow: 0 0 8px #00f2ff55;
+    }
+    .thankyou-box p {
+      font-size: 1.15rem;
+      margin: 1rem 0;
+      color: #e0e0e0;
+      line-height: 1.7;
+    }
+    .btn-home {
+      margin-top: 1.5rem;
+      background: linear-gradient(90deg, #ffd700, #ff8800);
+      color: #222;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 2px 12px #ffd70033;
+      transition: 0.3s;
+      display: inline-block;
+    }
+    .btn-home:hover {
+      background: linear-gradient(90deg, #ffb700, #ffd700);
+      color: #000;
+      transform: scale(1.05);
+      box-shadow: 0 4px 24px #ffd70066;
+    }
+    @media (max-width: 480px) {
+      .thankyou-box {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        max-width: 98vw;
+      }
+      h1 { font-size: 1.3rem; }
+      .thankyou-box p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-box">
+    <span class="checkmark">
+      <svg viewBox="0 0 54 54" fill="none">
+        <circle cx="27" cy="27" r="25" stroke="#00f2ff" stroke-width="4" fill="#181c2f"/>
+        <path d="M16 29L25 38L38 18" stroke="#ffd700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+    <h1>🎉 Thanh Toán Thành Công!</h1>
+    <p id="thankyou-msg">Cảm ơn bạn đã đặt mua.</p>
+    <p>Bạn sẽ nhận được template qua email trong vài phút.</p>
+    <a class="btn-home" href="index.html">← Quay về trang chủ</a>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get("name") || "bạn";
+    const product = urlParams.get("product");
+
+    const nameMap = {
+      basic: 'Gói Cơ Bản',
+      pro: 'Gói Nâng Cao',
+      full: 'Gói Toàn Diện'
+    };
+
+    document.getElementById("thankyou-msg").textContent = `Cảm ơn ${name} đã mua ${nameMap[product] || 'gói đặc biệt'}!`;
+  </script>
+</body>
+</html>
