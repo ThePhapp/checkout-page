@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Solo Leveling Notion</title>
   <link rel="stylesheet" href="homeStyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 </head>
 <body>
 
@@ -17,6 +19,67 @@
     </div>
     <a href="#buy-section" class="cta-btn">Get Started Now</a>
   </header>
+<section class="slideshow-section">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="slide-img-wrapper">
+          <img src="https://payhip.com/cdn-cgi/image/format=auto,width=900/https://pe56d.s3.amazonaws.com/o_1iqqq6ab532q123vpch3kc1ora17.png"
+               alt="Dashboard Preview"
+               class="slide-img"
+               loading="lazy" />
+        </div>
+        <div class="slide-caption">Player Dashboard: Track your XP, gold, and streaks</div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="slide-img-wrapper">
+          <img src="https://payhip.com/cdn-cgi/image/format=auto,width=900/https://pe56d.s3.amazonaws.com/o_1iqqq704o1ts41mndvvt13hev1g1d.png"
+               alt="Quest Log"
+               class="slide-img"
+               loading="lazy" />
+        </div>
+        <div class="slide-caption">Quest Log: Gamify your daily tasks</div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="slide-img-wrapper">
+          <img src="https://payhip.com/cdn-cgi/image/format=auto,width=900/https://pe56d.s3.amazonaws.com/o_1iqqq74ohmpd1a0h1car1b72h1j.png"
+               alt="Rewards Page"
+               class="slide-img"
+               loading="lazy" />
+        </div>
+        <div class="slide-caption">Rewards Page: Turn gold into guilt-free rest</div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <div class="slide-img-wrapper">
+          <img src="https://payhip.com/cdn-cgi/image/format=auto,width=900/https://pe56d.s3.amazonaws.com/o_1iqqq7a8hipkrl3138d1do4g3e1p.png"
+               alt="Boss Battles"
+               class="slide-img"
+               loading="lazy" />
+        </div>
+        <div class="slide-caption">Boss Battles: Level up through epic challenges</div>
+      </div>
+      <!-- Slide 5 -->
+      <div class="swiper-slide">
+        <div class="slide-img-wrapper">
+          <img src="https://payhip.com/cdn-cgi/image/format=auto,width=900/https://pe56d.s3.amazonaws.com/o_1iqqq7e2l1i74kdnk6c1t22oj61v.png"
+               alt="Community Mode"
+               class="slide-img"
+               loading="lazy" />
+        </div>
+        <div class="slide-caption">Community Mode: Join our Discord and grow together</div>
+      </div>
+    </div>
+    <!-- Navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
 
   <section>
     <h2>🧍‍♂️ PLAYER DASHBOARD</h2>
@@ -168,5 +231,27 @@
     <span style="color:#ffd700;">Ready to level up?</span>
   </footer>
 
+  <!-- SwiperJS JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 </body>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    effect: "slide",
+  });
+</script>
+
 </html>
