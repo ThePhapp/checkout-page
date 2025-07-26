@@ -1,0 +1,241 @@
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0f1a, #1e1e2f 100%);
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #4b0082, #00ffff 80%);
+      padding: 2.5rem 1rem 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 24px #00f2ff22;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.7rem;
+      letter-spacing: 2px;
+      color: #ffd700;
+      text-shadow: 0 0 12px #00f2ff55;
+    }
+    .intro {
+      font-size: 1.25rem;
+      margin: 1.2rem auto 0.5rem auto;
+      max-width: 700px;
+      color: #e0e0e0;
+      text-shadow: 0 0 8px #0005;
+    }
+    .cta-btn {
+      display: inline-block;
+      margin-top: 1.2rem;
+      background: linear-gradient(90deg, #ffd700, #00f2ff);
+      color: #222;
+      padding: 0.9rem 2.2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.15rem;
+      box-shadow: 0 2px 12px #00f2ff33;
+      transition: transform 0.2s, box-shadow 0.2s;
+      letter-spacing: 1px;
+    }
+    .cta-btn:hover {
+      background: linear-gradient(90deg, #00f2ff, #ffd700);
+      color: #000;
+      transform: scale(1.07);
+      box-shadow: 0 4px 24px #ffd70066;
+    }
+    section {
+      padding: 2rem;
+      border-bottom: 1px solid #222;
+    }
+    section h2 {
+      color: #ffd700;
+      font-size: 1.35rem;
+      margin-bottom: 0.7rem;
+    }
+    .highlight {
+      color: #00ffff;
+      font-weight: bold;
+    }
+    .feature {
+      margin-bottom: 1.5rem;
+    }
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .product-card {
+      background-color: #1c1c2e;
+      padding: 1.5rem;
+      border-radius: 14px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 2px 16px #00f2ff22;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-card:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 32px #ffd70033;
+    }
+    .product-card h3 {
+      color: #ffd700;
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+    }
+    .product-card .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      color: #00ffff;
+      text-shadow: 0 0 8px #00f2ff55;
+    }
+    .product-card .buy-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #00ffff, #ffd700);
+      color: #222;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: 0.7rem;
+      box-shadow: 0 2px 12px #00f2ff33;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .product-card .buy-btn:hover {
+      background: linear-gradient(90deg, #ffd700, #00ffff);
+      color: #000;
+      transform: scale(1.07);
+    }
+    footer {
+      background-color: #1a1a2e;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 1rem;
+      color: #aaa;
+      letter-spacing: 1px;
+      box-shadow: 0 -2px 16px #00f2ff22;
+    }
+    .support-chat {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 999;
+    }
+    .chat-btn {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, #23263a, #00f2ff 80%);
+      color: #fff;
+      font-weight: bold;
+      padding: 10px 18px 10px 12px;
+      border-radius: 24px;
+      text-decoration: none;
+      box-shadow: 0 2px 12px #00f2ff33;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .chat-btn img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+    .chat-btn.discord { background: linear-gradient(90deg, #5865F2, #23263a 80%); }
+    .chat-btn.telegram { background: linear-gradient(90deg, #229ED9, #23263a 80%); }
+    .chat-btn:hover {
+      background: linear-gradient(90deg, #ffd700, #00f2ff 80%);
+      color: #222;
+      transform: scale(1.07);
+    }
+    .testimonial-section {
+      background: linear-gradient(90deg, #181c2f 80%, #23263a 100%);
+      padding: 2.2rem 1rem;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .testimonial-section h2 {
+      color: #ffd700;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+    }
+    .testimonial-list {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .testimonial-card {
+      background: rgba(44,44,66,0.95);
+      border-radius: 16px;
+      box-shadow: 0 2px 16px #00f2ff22;
+      padding: 1.2rem 1rem 1.2rem 1rem;
+      max-width: 260px;
+      min-width: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.2rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .testimonial-card:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 32px #ffd70033;
+    }
+    .testimonial-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7rem;
+      border: 2px solid #00f2ff;
+      box-shadow: 0 2px 8px #00f2ff33;
+    }
+    .testimonial-name {
+      font-weight: bold;
+      color: #00ffff;
+      margin-bottom: 0.5rem;
+      font-size: 1.08rem;
+    }
+    .testimonial-text {
+      color: #e0e0e0;
+      font-size: 1rem;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 1.2rem;
+      }
+      .product-list {
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .product-card {
+        width: 98vw;
+      }
+      .testimonial-card {
+        width: 100%;
+      }
+    }
+    @media (max-width: 700px) {
+      .testimonial-list {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+      }
+      .testimonial-card {
+        max-width: 98vw;
+      }
+    }

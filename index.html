@@ -3,147 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Solo Leveling Notion System</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0f0f1a, #1e1e2f 100%);
-      color: #fff;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(to right, #4b0082, #00ffff 80%);
-      padding: 2.5rem 1rem 2rem 1rem;
-      text-align: center;
-      box-shadow: 0 4px 24px #00f2ff22;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.7rem;
-      letter-spacing: 2px;
-      color: #ffd700;
-      text-shadow: 0 0 12px #00f2ff55;
-    }
-    .intro {
-      font-size: 1.25rem;
-      margin: 1.2rem auto 0.5rem auto;
-      max-width: 700px;
-      color: #e0e0e0;
-      text-shadow: 0 0 8px #0005;
-    }
-    .cta-btn {
-      display: inline-block;
-      margin-top: 1.2rem;
-      background: linear-gradient(90deg, #ffd700, #00f2ff);
-      color: #222;
-      padding: 0.9rem 2.2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.15rem;
-      box-shadow: 0 2px 12px #00f2ff33;
-      transition: transform 0.2s, box-shadow 0.2s;
-      letter-spacing: 1px;
-    }
-    .cta-btn:hover {
-      background: linear-gradient(90deg, #00f2ff, #ffd700);
-      color: #000;
-      transform: scale(1.07);
-      box-shadow: 0 4px 24px #ffd70066;
-    }
-    section {
-      padding: 2rem;
-      border-bottom: 1px solid #222;
-    }
-    section h2 {
-      color: #ffd700;
-      font-size: 1.35rem;
-      margin-bottom: 0.7rem;
-    }
-    .highlight {
-      color: #00ffff;
-      font-weight: bold;
-    }
-    .feature {
-      margin-bottom: 1.5rem;
-    }
-    .product-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    .product-card {
-      background-color: #1c1c2e;
-      padding: 1.5rem;
-      border-radius: 14px;
-      width: 280px;
-      text-align: center;
-      box-shadow: 0 2px 16px #00f2ff22;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .product-card:hover {
-      transform: scale(1.04);
-      box-shadow: 0 8px 32px #ffd70033;
-    }
-    .product-card h3 {
-      color: #ffd700;
-      margin-bottom: 0.5rem;
-      font-size: 1.15rem;
-      letter-spacing: 1px;
-    }
-    .product-card .price {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin: 1rem 0;
-      color: #00ffff;
-      text-shadow: 0 0 8px #00f2ff55;
-    }
-    .product-card .buy-btn {
-      display: inline-block;
-      background: linear-gradient(90deg, #00ffff, #ffd700);
-      color: #222;
-      padding: 0.7rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      margin-top: 0.7rem;
-      box-shadow: 0 2px 12px #00f2ff33;
-      transition: background 0.2s, color 0.2s, transform 0.2s;
-    }
-    .product-card .buy-btn:hover {
-      background: linear-gradient(90deg, #ffd700, #00ffff);
-      color: #000;
-      transform: scale(1.07);
-    }
-    footer {
-      background-color: #1a1a2e;
-      text-align: center;
-      padding: 1.2rem;
-      font-size: 1rem;
-      color: #aaa;
-      letter-spacing: 1px;
-      box-shadow: 0 -2px 16px #00f2ff22;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      section {
-        padding: 1.2rem;
-      }
-      .product-list {
-        flex-direction: column;
-        gap: 1.2rem;
-      }
-      .product-card {
-        width: 98vw;
-      }
-    }
-  </style>
+  <title>Solo Leveling Notion</title>
+  <link rel="stylesheet" href="homeStyle.css">
 </head>
 <body>
 
@@ -263,6 +124,44 @@
       </div>
     </div>
   </section>
+
+  <!-- Thêm ngay trước <section id="buy-section"> -->
+  <section class="testimonial-section">
+    <h2>🌟 What Our Users Say</h2>
+    <div class="testimonial-list">
+      <div class="testimonial-card">
+        <img src="image/avatar1.jpg" alt="User 1" class="testimonial-avatar" />
+        <div class="testimonial-name">Alex Nguyen</div>
+        <div class="testimonial-text">
+          “This Notion system made me excited to plan my day. I actually look forward to completing quests and leveling up. Highly recommended for anyone who loves gamification!”
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <img src="image/avatar2.jpg" alt="User 2" class="testimonial-avatar" />
+        <div class="testimonial-name">Minh Tran</div>
+        <div class="testimonial-text">
+          “I stopped procrastinating and started hitting my goals. The rewards page is genius — now I earn my Netflix time!”
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <img src="image/avatar3.jpg" alt="User 3" class="testimonial-avatar" />
+        <div class="testimonial-name">Linh Pham</div>
+        <div class="testimonial-text">
+          “The boss battles and streaks keep me motivated every day. Best productivity tool I’ve ever used.”
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discord & Telegram Support Buttons -->
+  <div class="support-chat">
+    <a href="https://www.instagram.com/" target="_blank" class="chat-btn discord">
+      <img src="image/ig.jpg" alt="Discord" /> Instagram Support
+    </a>
+    <a href="https://t.me/your-telegram-link" target="_blank" class="chat-btn telegram">
+      <img src="image/fb.jpg" alt="Telegram" /> Facebook Support
+    </a>
+  </div>
 
   <footer>
     💥 This is more than a template — it’s your transformation system.<br>
