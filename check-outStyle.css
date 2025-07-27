@@ -217,3 +217,35 @@ h1 {
   text-shadow: 0 0 8px #00f2ff55;
   font-weight: bold;
 }
+
+@media (max-width: 520px) {
+  .checkout-card {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+    max-width: 98vw;
+    border-radius: 12px;
+  }
+  .checkout-card h1 { font-size: 1.2rem; }
+  .checkout-card .product-name { font-size: 1rem; }
+  .checkout-card .price { font-size: 1rem; }
+  .checkout-card input {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.7rem;
+  }
+  .qr-img { width: 110px; }
+  .buy-btn {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 8px;
+  }
+  .footer-note {
+    font-size: 0.85rem;
+    margin-top: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .checkout-card {
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+  }
+  .qr-img { width: 80px; }
+}
