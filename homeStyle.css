@@ -6,9 +6,11 @@ body {
       line-height: 1.6;
     }
     header {
-      background: linear-gradient(to right, #4b0082, #00ffff 80%);
-      padding: 2.5rem 1rem 2rem 1rem;
+      position: relative;
+      overflow: hidden;
+      padding: 3.5rem 1rem 2.2rem 1rem;
       text-align: center;
+      background: linear-gradient(to right, #4b0082, #00ffff 80%);
       box-shadow: 0 4px 24px #00f2ff22;
     }
     header h1 {
@@ -17,6 +19,8 @@ body {
       letter-spacing: 2px;
       color: #ffd700;
       text-shadow: 0 0 12px #00f2ff55;
+      position: relative;
+      z-index: 1;
     }
     .intro {
       font-size: 1.25rem;
@@ -24,6 +28,8 @@ body {
       max-width: 700px;
       color: #e0e0e0;
       text-shadow: 0 0 8px #0005;
+      position: relative;
+      z-index: 1;
     }
     .cta-btn {
       display: inline-block;
@@ -38,12 +44,33 @@ body {
       box-shadow: 0 2px 12px #00f2ff33;
       transition: transform 0.2s, box-shadow 0.2s;
       letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
     }
     .cta-btn:hover {
       background: linear-gradient(90deg, #00f2ff, #ffd700);
       color: #000;
       transform: scale(1.07);
       box-shadow: 0 4px 24px #ffd70066;
+    }
+    .cta-group {
+      margin-top: 1.2rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .cta-btn.buy {
+      background: linear-gradient(90deg,#ffd700,#ff7b00);
+      color: #222;
+    }
+    .cta-btn.demo {
+      background: linear-gradient(90deg,#00f2ff,#23263a);
+      color: #fff;
+    }
+    .cta-btn.discord {
+      background: linear-gradient(90deg,#5865F2,#23263a 80%);
+      color: #fff;
     }
     section {
       padding: 2rem;
@@ -332,4 +359,34 @@ body {
     font-size: 1rem;
     margin-top: 0.5rem;
   }
+}
+
+.header-bg-anim {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 60% 40%, #00f2ff55 0%, #181c2f 70%), 
+              radial-gradient(circle at 20% 80%, #ffd70033 0%, #181c2f 80%);
+  animation: headerGlow 4s infinite alternate;
+  opacity: 0.7;
+}
+
+@keyframes headerGlow {
+  0% { filter: blur(0px) brightness(1); opacity: 0.7; }
+  100% { filter: blur(8px) brightness(1.2); opacity: 1; }
+}
+
+.header-logo {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1.2rem auto;
+  box-shadow: 0 0 24px #00f2ff55, 0 2px 12px #ffd70055;
+  display: block;
+  position: relative;
+  z-index: 1;
 }
