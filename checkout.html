@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <title>Checkout</title>
+  <title>Thanh toán</title>
   <link rel="stylesheet" href="check-outStyle.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <style>
@@ -155,34 +155,34 @@
 </head>
 <body>
   <div class="checkout-card">
-    <h1>🧾 Payment</h1>
-    <div class="product-name" id="product-name">Basic Package</div>
+    <h1>🧾 Thanh toán</h1>
+    <div class="product-name" id="product-name">Gói Cơ Bản</div>
     <div class="price" id="product-price">199,000₫</div>
 
     <form id="checkout-form">
-      <input type="text" placeholder="Your full name" required />
-      <input type="email" placeholder="Email to receive template" required />
+      <input type="text" placeholder="Họ và tên của bạn" required />
+      <input type="email" placeholder="Email nhận template" required />
 
       <div class="qr-section">
-        <img src="image/fb.jpg" alt="QR Code" class="qr-img" />
-        <div class="qr-caption">Scan QR to pay</div>
+        <img src="image/fb.jpg" alt="Mã QR" class="qr-img" />
+        <div class="qr-caption">Quét mã QR để thanh toán</div>
       </div>
 
-      <button type="submit" class="buy-btn">CONFIRM PURCHASE</button>
+      <button type="submit" class="buy-btn">XÁC NHẬN MUA</button>
     </form>
 
-    <div class="footer-note">After payment, you will receive the template via email.</div>
+    <div class="footer-note">Sau khi thanh toán, bạn sẽ nhận được template qua email.</div>
   </div>
 
 <script>
-  // Set package name and price from URL
+  // Lấy tên gói và giá từ URL
   const params = new URLSearchParams(window.location.search);
   const product = params.get('product');
 
   const nameMap = {
-    basic: 'Basic Package',
-    pro: 'Pro Package',
-    full: 'Full Package'
+    basic: 'Gói Cơ Bản',
+    pro: 'Gói Pro',
+    full: 'Gói Đầy Đủ'
   };
 
   const priceMap = {
@@ -191,10 +191,10 @@
     full: '499,000₫'
   };
 
-  document.getElementById('product-name').textContent = nameMap[product] || 'Unknown Package';
+  document.getElementById('product-name').textContent = nameMap[product] || 'Không xác định';
   document.getElementById('product-price').textContent = priceMap[product] || '0₫';
 
-  // Handle form submit
+  // Xử lý submit form
   document.getElementById('checkout-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -204,7 +204,7 @@
     if (name && email) {
       window.location.href = `thankyou.html?name=${encodeURIComponent(name)}&product=${product}`;
     } else {
-      alert("Please enter all required information.");
+      alert("Vui lòng nhập đầy đủ thông tin.");
     }
   });
 </script>
