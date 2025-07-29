@@ -20,8 +20,8 @@
       <span class="highlight">Solo Leveling Notion</span> giúp bạn luyện tập từ vựng, ngữ pháp, nghe nói, đọc viết và chuẩn bị thi TOPIK qua hệ thống nhiệm vụ, phần thưởng và cấp độ.<br>
       Không còn nhàm chán hay trì hoãn. Mỗi ngày là một thử thách mới, mỗi kỹ năng là một màn chơi. Sẵn sàng chinh phục tiếng Hàn như một anh hùng!
     </div>
-    <div class="cta-group">
-      <a href="#buy-section" class="cta-btn buy">Mua ngay</a>
+    <div class="header-cta-top">
+      <a href="#buy-section" class="cta-btn buy" id="smooth-buy-btn">Mua ngay</a>
       <a href="https://notion.so/demo-link" target="_blank" class="cta-btn demo">Xem bản demo</a>
       <a href="https://discord.com/invite/your-invite-link" target="_blank" class="cta-btn discord">Tham gia cộng đồng</a>
     </div>
@@ -80,10 +80,8 @@
         <div class="slide-caption">Cộng đồng: Cùng nhau luyện tập, thi đua, chia sẻ kinh nghiệm học tiếng Hàn</div>
       </div>
     </div>
-    <!-- Nút điều hướng -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
-    <!-- Phân trang -->
     <div class="swiper-pagination"></div>
   </div>
 </section>
@@ -232,7 +230,7 @@
   </div>
 
   <footer>
-    💥 Đây không chỉ là một template — mà là hệ thống giúp bạn chinh phục tiếng Hàn và đạt TOPIK.<br>
+    💥 Đây không chỉ là một công cụ — mà là vũ khí tối thượng giúp bạn làm chủ tiếng Hàn và bứt phá đạt TOPIK trong thời gian ngắn!<br>
     <span style="color:#ffd700;">Sẵn sàng thăng cấp kỹ năng tiếng Hàn chưa?</span>
   </footer>
 
@@ -256,5 +254,16 @@
       prevEl: ".swiper-button-prev"
     },
     effect: "slide",
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const buyBtn = document.getElementById('smooth-buy-btn');
+    const buySection = document.getElementById('buy-section');
+    if (buyBtn && buySection) {
+      buyBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        buySection.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
   });
 </script>
