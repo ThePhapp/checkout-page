@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thanh toán</title>
+  <link rel="stylesheet" href="css/checkout.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="checkout-card">
+    <h1>🧾 Thanh toán</h1>
+
+    <!-- Thông tin gói được truyền từ URL -->
+    <div class="product-name" id="product-name">Đang tải...</div>
+    <div class="price" id="product-price">-</div>
+
+    <!-- Form thông tin khách hàng -->
+    <form id="checkout-form">
+      <input type="text" placeholder="Họ và tên của bạn" name="fullname" required />
+      <input type="email" placeholder="Email nhận template" name="email" required />
+
+      <div class="qr-section">
+        <img src="image/fb.jpg" alt="Mã QR" class="qr-img" />
+        <div class="qr-caption">Quét mã QR để thanh toán</div>
+      </div>
+
+      <button type="submit" class="buy-btn">XÁC NHẬN MUA</button>
+    </form>
+
+    <div class="footer-note">
+      Sau khi thanh toán, bạn sẽ nhận được template qua email.
+    </div>
+  </div>
+
+  <script>
+    // Dữ liệu gói hàng
+    const products = {
+      basic: {
+        name: "Gói Cơ Bản",
+        price: "97,000₫"
+      },
+      pro: {
+        name: "Gói Solo Mode",
+        price: "497,000₫"
+      },
+      full: {
+        name: "Gói Guild Mode (Full Coaching)",
+        price: "997,000₫"
+      }
+    };
+
+    const query = new URLSearchParams(window.location.search);
+    const productKey = query.get("product");
+
+    const nameElement = document.getElementById("product-name");
+    const priceElement = document.getElementById("product-price");
+
+    if (products[productKey]) {
+      nameElement.textContent = products[productKey].name;
+      priceElement.textContent = products[productKey].price;
+    } else {
+      nameElement.textContent = "Sản phẩm không xác định";
+      priceElement.textContent = "-";
+    }
+
+    document.getElementById("checkout-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const fullName = document.querySelector('input[name="fullname"]').value;
+  const query = new URLSearchParams(window.location.search);
+  const productKey = query.get("product");
+
+  const successUrl = `success.html?name=${encodeURIComponent(fullName)}&product=${productKey}`;
+  window.location.href = successUrl;
+});
+
+  </script>
+</body>
+</html>
