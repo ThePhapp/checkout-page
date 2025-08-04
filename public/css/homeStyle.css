@@ -1,22 +1,57 @@
 body {
-      margin: 0;
-      font-family: 'Be Vietnam Pro', sans-serif;
-      background: #000;
-      color: #fff;
-      line-height: 1.6;
-    }
-    section,
-.story-section,
-.testimonial-section {
-  background: transparent !important;
-  border: none;
+  margin: 0;
+  background: linear-gradient(180deg, #0f0f1a 0%, #1a1328 100%);
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
 }
-    header {
-      padding: 4rem 1rem 2rem 1rem;
-      text-align: center;
-      background: #000;
-      position: relative;
-    }
+
+h1, h2, h3 {
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.1);
+}
+
+.highlight {
+  color: #00ffc3;
+  font-weight: bold;
+}
+
+section,
+.story-section,
+.testimonial-section,
+.curriculum-item,
+.product-card,
+.testimonial-card {
+  background: #1e1b2f;
+  border: 1px solid #6f00ff55;
+  box-shadow: 0 0 16px #a26aff33;
+  border-radius: 16px;
+}
+
+section {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  box-sizing: border-box;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #ffd700;
+  text-align: center;
+}
+
+.feature {
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+header {
+  background: linear-gradient(160deg, #1a1328, #1e1b2f);
+  padding: 4rem 1rem 2rem 1rem;
+  text-align: center;
+  position: relative;
+}
     .header-logo {
   width: 110px;
   height: 110px;
@@ -28,15 +63,7 @@ body {
   position: relative;
   z-index: 1;
     }
-    .header-bg-anim {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(circle at 60% 40%, #00f2ff33 0%, #000 70%), 
-                  radial-gradient(circle at 20% 80%, #00ff8833 0%, #000 80%);
-      z-index: 0;
-      opacity: 0.8;
-      pointer-events: none;
-    }
+    
     .container {
       position: relative;
       z-index: 2;
@@ -67,29 +94,28 @@ body {
       gap: 1rem;
       flex-wrap: wrap;
     }
-    .cta-btn {
-      display: inline-block;
-      background: linear-gradient(90deg,#00cc44,#00aa33);
-      color: #fff;
-      padding: 1rem 2rem;
-      border-radius: 32px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      box-shadow: 0 0 12px #00ff88aa;
-      transition: all 0.2s ease-in-out;
-      letter-spacing: 0.5px;
-      position: relative;
-      z-index: 1;
-      border: none;
-      text-transform: uppercase;
-    }
-    .cta-btn:hover {
-      background: #00ff88;
-      color: #000;
-      transform: scale(1.07);
-      box-shadow: 0 0 20px #00ff88cc;
-    }
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #00ffc3, #4d00a4);
+  color: #1a1328;
+  padding: 1rem 2rem;
+  border-radius: 32px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 0 12px #00ffc355;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.cta-btn:hover {
+  background: linear-gradient(90deg, #00fff2, #7d33ff);
+  color: #000;
+  transform: scale(1.07);
+  box-shadow: 0 0 24px #00ffc3aa;
+}
     .warning-box {
       max-width: 640px;
       margin: 2rem auto;
@@ -159,78 +185,64 @@ body {
     .feature {
       margin-bottom: 1.5rem;
     }
-    .product-list {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      align-items: stretch;
-      flex-wrap: wrap;
-    }
-    .product-card {
-      background-color: #23232a;
-      padding: 1.5rem;
-      border-radius: 22px;
-      width: 320px;
-      text-align: center;
-      box-shadow: 0 2px 24px #000a;
-      transition: transform 0.2s, box-shadow 0.2s;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      height: 100%;
-      min-height: 390px;
-    }
-    .product-card:hover {
-      transform: scale(1.04);
-      box-shadow: 0 8px 32px #faff0033;
-    }
-    .product-card h3 {
-      margin-bottom: 1rem;
-      color: #ffd700;
-      font-size: 1.3rem;
-      font-weight: bold;
-    }
-    .product-card p {
-      flex: 1 1 auto;
-      margin-bottom: 1.2rem;
-      color: #fff;
-    }
-    .product-card .price {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin: 1rem 0 1.5rem 0;
-      color: #faff00;
-      text-shadow: 0 0 8px #faff0055;
-    }
-    .product-card .buy-btn {
-      margin-top: auto;
-      margin-bottom: 0;
-      background: #faff00;
-      color: #181820;
-      padding: 1rem 2.5rem;
-      border-radius: 32px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.15rem;
-      box-shadow: 0 2px 12px #faff0033;
-      transition: background 0.2s, color 0.2s, transform 0.2s;
-      letter-spacing: 1px;
-      border: none;
-      display: inline-block;
-    }
-    .product-card .buy-btn:hover {
-  transform: scale(1.05) translateY(-2px);
-  background: linear-gradient(90deg, #fff700, #ffd700);
-    }
-    footer {
-      background: #23232a;
-      text-align: center;
-      padding: 1.2rem;
-      font-size: 1rem;
-      color: #aaa;
-      letter-spacing: 1px;
-      box-shadow: 0 -2px 16px #0008;
-    }
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.product-card {
+  padding: 1.5rem;
+  width: 310px;
+  text-align: center;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 24px #a26aff99;
+}
+
+.product-card h3 {
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+.product-card .price {
+  font-size: 1.2rem;
+  color: #ffea00;
+  margin: 1rem 0;
+}
+
+.product-card .buy-btn {
+  background: linear-gradient(90deg, #00ffc3, #4d00a4);
+  color: #1a1328;
+  padding: 0.9rem 2rem;
+  border-radius: 28px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.product-card .buy-btn:hover {
+  background: linear-gradient(90deg, #00fff2, #7d33ff);
+  transform: scale(1.05);
+}
+footer {
+  background: #1a1328;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
+  color: #bbb;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -2px 12px #000a;
+}
     .support-chat {
       position: fixed;
       right: 24px;
@@ -265,7 +277,7 @@ body {
       color: #181820;
     }
 .testimonial-section {
-  background: #000;
+  background: #1e1b2f;
   padding: 4rem 1rem;
   text-align: center;
   max-width: 1200px;
@@ -282,47 +294,44 @@ body {
 .testimonial-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .testimonial-card {
-  background: #111;
-  border-radius: 16px;
-  padding: 1.5rem 1rem;
-  max-width: 320px;
-  width: 100%;
-  box-shadow: 0 4px 20px rgba(0, 255, 136, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 1.5rem;
+  width: 300px;
+  transition: 0.3s;
+  text-align: center;
 }
 
 .testimonial-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 32px rgba(0, 255, 136, 0.35);
+  transform: scale(1.05);
+  box-shadow: 0 0 24px #a26aff99;
 }
 
 .testimonial-avatar {
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  object-fit: cover;
+  border: 3px solid #00ffc3;
+  box-shadow: 0 0 8px #00ffc355;
   margin-bottom: 1rem;
-  border: 3px solid #00ff88;
+  object-fit: cover;
 }
 
 .testimonial-name {
+  color: #00ffc3;
   font-weight: bold;
-  color: #00ff88;
   margin-bottom: 0.5rem;
-  font-size: 1.15rem;
 }
 
 .testimonial-text {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #e0e0e0;
+  color: #ccc;
   font-style: italic;
 }
+
 
 @media (max-width: 768px) {
   .testimonial-list {
@@ -553,8 +562,8 @@ body {
     max-width: 900px;
     margin: 3rem auto;
     padding: 0 1.2rem;
-    background: #001a0e;
-    border-left: 4px solid #00cc66;
+    background: #1e1b2f;
+    border-left: 4px solid #41013b;
   }
   .story-section h2 {
     font-size: 1.6rem;
@@ -584,12 +593,17 @@ body {
   font-weight: 800;
 }
 .cta-section {
-  margin-top: 2.5rem;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 2rem 0;
   text-align: center;
 }
+
 .curriculum-section {
   padding: 4rem 1rem;
-  background: #000;
+  background: #1e1b2f;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
