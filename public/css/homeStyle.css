@@ -12,7 +12,7 @@ h1, h2, h3 {
 }
 
 .highlight {
-  color: #00ffc3;
+  color: #ffd700;
   font-weight: bold;
 }
 
@@ -71,9 +71,9 @@ header {
     .tagline {
       display: inline-block;
       padding: 10px 20px;
-      border: 1px solid #00ff88;
+      border: 1px solid #ffd700;
       border-radius: 999px;
-      color: #00ff88;
+      color: #ffd700;
       font-size: 0.95rem;
       margin-bottom: 1.5rem;
       box-shadow: 0 0 12px #00ff8844;
@@ -85,7 +85,7 @@ header {
       text-align: center;
     }
     .title .highlight {
-      color: #00cc66;
+      color: #ffd700;
     }
     .header-cta-top {
       margin-top: 2rem;
@@ -164,26 +164,6 @@ header {
       padding-left: 24px;
       padding-right: 24px;
       box-sizing: border-box;
-    }
-    section {
-      padding: 3rem 1rem;
-      border-bottom: 1px solid #23232a;
-      background: #181820;
-      max-width: 1200px;
-      margin: 0 auto 2.2rem auto;
-      box-sizing: border-box;
-    }
-    section h2 {
-      color: #ffd700;
-      font-size: 1.35rem;
-      margin-bottom: 0.7rem;
-    }
-    .highlight {
-      color: #00ffff;
-      font-weight: bold;
-    }
-    .feature {
-      margin-bottom: 1.5rem;
     }
 .product-list {
   display: flex;
@@ -571,7 +551,7 @@ footer {
     margin-bottom: 1rem;
   }
   .story-section .highlight {
-    color: #00cc66;
+    color: #ffd700;
     font-weight: bold;
   }
   .story-section p {
@@ -589,7 +569,7 @@ footer {
 }
 
 .centered-heading .highlight {
-  color: #00ff88;
+  color: #ffd700;
   font-weight: 800;
 }
 .cta-section {
