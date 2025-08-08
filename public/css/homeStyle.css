@@ -208,11 +208,20 @@ header {
   transition: 0.3s;
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .product-card .buy-btn:hover {
   background: linear-gradient(90deg, #00fff2, #7d33ff);
   transform: scale(1.05);
+}
+.product-image {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 12px #0005;
 }
 footer {
   background: #1a1328;
