@@ -190,8 +190,9 @@ header {
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 20px;
   justify-content: center;
+  align-items: stretch;
 }
 
 .product-card {
@@ -202,7 +203,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 460px;
+  min-height: 500px;
 }
 
 .product-card:hover {
@@ -214,7 +215,14 @@ header {
   color: #ffd700;
   margin-bottom: 1rem;
 }
-
+.product-description {
+ flex-grow: 1;               /* Cho phép khối này chiếm không gian trống */
+  display: flex;              /* Bật flexbox */
+  justify-content: center;    /* Canh giữa ngang */
+  align-items: center;        /* Canh giữa dọc */
+  text-align: center;         /* Căn chữ ở giữa */
+  margin-bottom: 1rem;
+}
 .product-card .price {
   font-size: 1.2rem;
   color: #ffea00;
