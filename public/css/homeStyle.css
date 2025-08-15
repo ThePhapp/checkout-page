@@ -22,9 +22,9 @@ section,
 .curriculum-item,
 .product-card,
 .testimonial-card {
-  background: #1e1b2f;
-  border: 1px solid #b873ff;
-  box-shadow: 0 0 16px #b873ff;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid #b873ff;
+  box-shadow: 0 0 25px rgba(184, 115, 255, 0.3);
   border-radius: 16px;
 }
 
@@ -93,7 +93,7 @@ header {
   margin-top: 15px;
   font-size: 1.05rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.85); /* chữ sáng hơn một chút so với #555 vì nền tối */
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
   font-style: italic;
   text-align: center;
@@ -135,16 +135,16 @@ header {
   background: linear-gradient(90deg, #00fff2, #7d33ff);
   color: #000;
   transform: scale(1.07);
-  box-shadow: 0 0 24px #00ffc3aa;
+  box-shadow: 0 0 25px rgba(184, 115, 255, 0.3);
 }
     .warning-box {
       max-width: 640px;
       margin: 2rem auto;
-      background: #001c10;
+  background: rgba(0, 0, 0, 0.4);
       border: 1px solid #b873ff;  
       padding: 1.5rem;
       border-radius: 16px;
-      box-shadow: 0 0 12px #b873ff;
+  box-shadow: 0 0 25px rgba(184, 115, 255, 0.3);
     }
     .warning-box strong {
       display: block;
@@ -203,6 +203,8 @@ header {
   flex-direction: column;
   justify-content: space-between;
   min-height: 500px;
+    box-shadow: 0 0 25px rgba(184, 115, 255, 0.3);
+      background: rgba(0, 0, 0, 0.4);
 }
 
 .product-card:hover {
@@ -295,7 +297,7 @@ footer {
       color: #181820;
     }
 .testimonial-section {
-  background: #1e1b2f;
+  background: rgba(0, 0, 0, 0.4);
   padding: 4rem 1rem;
   text-align: center;
   max-width: 1200px;
@@ -439,8 +441,8 @@ footer {
   align-items: center;
   justify-content: center;
   border-radius: 24px;
-  background: #181c2f;
-  box-shadow: 0 4px 48px #00f2ff33, 0 2px 24px #0003;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 25px rgba(184, 115, 255, 0.3);
   overflow: hidden;
 }
 
@@ -501,12 +503,6 @@ footer {
   box-shadow: 0 2px 12px #faff0033;
   border: none;
   transition: background 0.2s, color 0.2s, transform 0.2s;
-}
-
-.header-cta-top .cta-btn.buy {
-  background: linear-gradient(90deg,#ffd700,#ff7b00);
-  color: #222;
-  font-weight: bold;
 }
 
 .header-cta-top .cta-btn.demo,
@@ -579,7 +575,7 @@ footer {
     max-width: 900px;
     margin: 3rem auto;
     padding: 0 1.2rem;
-    background: #1e1b2f;
+  background: rgba(0, 0, 0, 0.4);
     border-left: 4px solid #41013b;
   }
   .story-section h2 {
@@ -620,10 +616,11 @@ footer {
 
 .curriculum-section {
   padding: 4rem 1rem;
-  background: #1e1b2f;
+  background: rgba(0, 0, 0, 0.4);
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+    box-shadow: 0 0 25px rgba(184, 115, 255, 0.3);
 }
 
 .section-title {
@@ -697,4 +694,20 @@ footer {
     box-shadow: 0 0 16px #c77dff, 0 0 32px #a855f7, 0 0 48px #c77dff;
     opacity: 0.85;
   }
+}
+.btn-buy {
+  background: linear-gradient(to right, #b873ff, #6a0dad);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(184, 115, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-buy:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(184, 115, 255, 0.8);
 }
