@@ -8,30 +8,43 @@
 </head>
 <body>
   <div class="checkout-card">
-    <h1>🧾 Thanh toán</h1>
+  <h1>🧾 Thanh toán</h1>
 
-    <!-- Thông tin gói được truyền từ URL -->
-    <div class="product-name" id="product-name">Đang tải...</div>
-    <div class="price" id="product-price">-</div>
+  <!-- Thông tin gói được truyền từ URL -->
+  <div class="product-name" id="product-name">Đang tải...</div>
+  <div class="price" id="product-price">-</div>
 
-    <!-- Form thông tin khách hàng -->
-    <form id="checkout-form">
-      <input type="text" placeholder="Họ và tên của bạn" name="fullname" required />
-      <input type="email" placeholder="Email nhận template" name="email" required />
-
-      <div class="qr-section">
-        <img src="image/thread.jpg" alt="Mã QR" class="qr-img" />
-        <div class="qr-caption">Quét mã QR để thanh toán</div>
-      </div>
-
-      <button type="submit" class="buy-btn">XÁC NHẬN MUA</button>
-    </form>
-
-    <div class="footer-note">
-      Sau khi thanh toán, bạn sẽ nhận được template qua email.
+  <!-- Form thông tin khách hàng -->
+  <form id="checkout-form">
+    <div class="input-group">
+      <input type="text" name="fullname" id="fullname" placeholder=" " required />
+      <label for="fullname">Họ và tên của bạn</label>
     </div>
-  </div>
+    <div class="input-group">
+      <input type="email" name="email" id="email" placeholder=" " required />
+      <label for="email">Email nhận template</label>
+    </div>
 
+    <div class="qr-section">
+      <img src="image/qrcode.png" alt="Mã QR" class="qr-img" />
+            <div class="account-info">
+        MOMO_NGUYEN LE DONG GIANG
+      </div>
+      <div class="qr-caption">Quét mã QR để thanh toán</div>
+    </div>
+
+    <button type="submit" class="buy-btn">XÁC NHẬN MUA</button>
+  </form>
+
+  <div class="footer-note">
+    Sau khi thanh toán, bạn sẽ nhận được template qua email.
+  </div>
+</div>
+<div class="support-chat">
+    <a href="https://www.threads.com/@i.am.giangg" target="_blank" class="chat-btn discord">
+      <img src="image/thread.jpg" alt="Thread" /> Liên hệ mình qua Thread
+    </a>
+  </div>
   <script>
     // Dữ liệu gói hàng
     const products = {

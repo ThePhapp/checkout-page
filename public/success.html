@@ -2,31 +2,70 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Sucessfull</title>
+  <title>Thanh toán thành công</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(135deg, #0f0f1a 60%, #1e2f3a 100%);
+      background: linear-gradient(135deg, #0e0f1c 60%, #1a2533 100%);
       color: #fff;
-      font-family: 'Orbitron', sans-serif;
+  font-family: Arial, sans-serif;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      margin: 0;
       text-align: center;
       animation: fadeInBody 1s;
     }
+    .support-chat {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.chat-btn {
+  display: flex;
+  align-items: center;
+  background: #23232a;
+  color: #fff;
+  border: 2px solid #b873ff;
+  padding: 10px 18px 10px 12px;
+  border-radius: 24px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px #00f2ff33;
+  font-size: 1rem;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.chat-btn img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.chat-btn.discord {
+  background: linear-gradient(90deg, #5865F2, #23263a 80%);
+}
+
+.chat-btn:hover {
+  background: #b873ff;
+  color: #181820;
+  transform: translateY(-2px);
+}
     @keyframes fadeInBody {
       from { opacity: 0; }
       to { opacity: 1; }
     }
     .thankyou-box {
-      background: rgba(28,28,46,0.96);
-      padding: 2.5rem 2rem 2rem 2rem;
+      background: rgba(28,28,46,0.95);
+      padding: 2.5rem 2rem;
       border-radius: 18px;
-      max-width: 420px;
-      box-shadow: 0 8px 32px #00f2ff33, 0 2px 16px #0003;
+      max-width: 500px;
+      box-shadow: 0 8px 30px #00f2ff44, 0 2px 14px #0006;
       position: relative;
       animation: popIn 0.7s;
     }
@@ -36,9 +75,9 @@
     }
     .checkmark {
       display: inline-block;
-      width: 54px;
-      height: 54px;
-      margin-bottom: 10px;
+      width: 70px;
+      height: 70px;
+      margin-bottom: 15px;
       animation: tada 1.2s;
     }
     @keyframes tada {
@@ -47,43 +86,43 @@
       100% { transform: scale(1) rotate(0);}
     }
     h1 {
-      color: #00ffff;
-      font-size: 2.1rem;
+      color: #00f2ff;
+      font-size: 2.2rem;
       margin-bottom: 1rem;
       letter-spacing: 1px;
-      text-shadow: 0 0 8px #00f2ff55;
+      text-shadow: 0 0 10px #00f2ff55;
     }
     .thankyou-box p {
       font-size: 1.15rem;
-      margin: 1rem 0;
-      color: #e0e0e0;
-      line-height: 1.7;
+      margin: 0.8rem 0;
+      color: #e8e8e8;
+      line-height: 1.6;
     }
     .btn-home {
-      margin-top: 1.5rem;
-      background: linear-gradient(90deg, #ffd700, #ff8800);
-      color: #222;
-      padding: 0.7rem 1.5rem;
-      border-radius: 8px;
+      margin-top: 1.8rem;
+      background: linear-gradient(90deg, #00f2ff, #00c3ff);
+      color: #0e0f1c;
+      padding: 0.8rem 1.8rem;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
       font-size: 1rem;
-      box-shadow: 0 2px 12px #ffd70033;
+      box-shadow: 0 2px 14px #00f2ff55;
       transition: 0.3s;
       display: inline-block;
     }
     .btn-home:hover {
-      background: linear-gradient(90deg, #ffb700, #ffd700);
+      background: linear-gradient(90deg, #00c3ff, #00f2ff);
       color: #000;
       transform: scale(1.05);
-      box-shadow: 0 4px 24px #ffd70066;
+      box-shadow: 0 4px 24px #00f2ff88;
     }
     @media (max-width: 480px) {
       .thankyou-box {
-        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
-        max-width: 98vw;
+        padding: 1.5rem 1rem;
+        max-width: 95vw;
       }
-      h1 { font-size: 1.3rem; }
+      h1 { font-size: 1.5rem; }
       .thankyou-box p { font-size: 1rem; }
     }
   </style>
@@ -92,16 +131,20 @@
   <div class="thankyou-box">
     <span class="checkmark">
       <svg viewBox="0 0 54 54" fill="none">
-        <circle cx="27" cy="27" r="25" stroke="#00f2ff" stroke-width="4" fill="#181c2f"/>
+        <circle cx="27" cy="27" r="25" stroke="#00f2ff" stroke-width="4" fill="#101426"/>
         <path d="M16 29L25 38L38 18" stroke="#ffd700" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </span>
-    <h1>🎉 Thanh Toán Thành Công!</h1>
+    <h1>🎉Thanh Toán Thành Công!</h1>
     <p id="thankyou-msg">Cảm ơn bạn đã đặt mua.</p>
     <p>Bạn sẽ nhận được template qua email trong vài phút.</p>
     <a class="btn-home" href="/index.html">← Quay về trang chủ</a>
   </div>
-
+<div class="support-chat">
+    <a href="https://www.threads.com/@i.am.giangg" target="_blank" class="chat-btn discord">
+      <img src="image/thread.jpg" alt="Thread" /> Liên hệ mình qua Thread
+    </a>
+  </div>
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     const name = urlParams.get("name") || "bạn";
@@ -113,7 +156,8 @@
       full: 'Gói Toàn Diện'
     };
 
-    document.getElementById("thankyou-msg").textContent = `Cảm ơn ${name} đã mua ${nameMap[product] || 'gói đặc biệt'}!`;
+    document.getElementById("thankyou-msg").textContent = 
+      `Cảm ơn ${name} đã mua ${nameMap[product] || 'gói đặc biệt'}!`;
   </script>
 </body>
 </html>

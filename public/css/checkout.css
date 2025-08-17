@@ -1,145 +1,224 @@
+/* Toàn trang */
 body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f0f1a 60%, #1a1a2e 100%);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2a1749, #000000);
+  color: #b873ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 
-    .checkout-card {
-      background: rgba(28,28,46,0.97);
-      padding: 2.5rem 2rem 2rem 2rem;
-      border-radius: 20px;
-      box-shadow: 0 8px 32px #00f2ff33, 0 2px 16px #0003;
-      width: 100%;
-      max-width: 430px;
-      text-align: center;
-      position: relative;
-      animation: popIn 0.7s;
-    }
-    @keyframes popIn {
-      0% { transform: scale(0.85); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
+/* Thẻ checkout */
+.checkout-card {
+  background: rgba(20, 20, 30, 0.8);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  box-shadow: 0 0 25px rgba(184, 115, 255, 0.3);
+  color: #fff;
+  text-align: center;
+  border: 2px solid #b873ff;
+  animation: fadeIn 1s ease-in-out;
+  backdrop-filter: blur(6px);
+}
 
-    .checkout-card h1 {
-      font-size: 2rem;
-      margin-bottom: 1.1rem;
-      color: #00f2ff;
-      text-shadow: 0 0 8px #00f2ff55;
-      letter-spacing: 1px;
-    }
+.checkout-card h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #b873ff;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(184, 115, 255, 0.6);
+}
 
-    .checkout-card .product-name {
-      color: #ffd700;
-      font-weight: bold;
-      font-size: 1.18rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.5px;
-    }
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
 
-    .checkout-card .price {
-      font-size: 1.45rem;
-      color: #00ffff;
-      margin-bottom: 1.2rem;
-      font-weight: bold;
-      text-shadow: 0 0 8px #00f2ff33;
-    }
+.price {
+  font-size: 1.4rem;
+  color: #00f2ff;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
 
-    .checkout-card input {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      margin: 0.6rem 0;
-      border-radius: 10px;
-      border: none;
-      background-color: #23263a;
-      color: #fff;
-      font-size: 1rem;
-      box-shadow: 0 2px 8px #0002;
-      transition: box-shadow 0.2s;
-    }
+/* Input */
+.input-group {
+  position: relative;
+  margin: 1.2rem auto;
+  text-align: left;
+  width: 95%;
+}
 
-    .checkout-card input:focus {
-      box-shadow: 0 0 0 2px #00f2ff55;
-      outline: none;
-    }
+.input-group input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid #2c2f48;
+  background-color: #23263a;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
 
-    .checkout-card input::placeholder {
-      color: #aaa;
-      font-style: italic;
-    }
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 0.95rem;
+  pointer-events: none;
+  transition: 0.2s ease;
+  background: #23263a;
+  padding: 0 0.3rem;
+  border-radius: 4px;
+}
 
-    .qr-section {
-      margin: 2rem 0 1.2rem 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+.input-group input:focus {
+  border-color: #b873ff;
+  box-shadow: 0 0 8px rgba(184, 115, 255, 0.6);
+}
 
-    .qr-img {
-      width: 180px;
-      border-radius: 14px;
-      margin-bottom: 0.7rem;
-      box-shadow: 0 0 32px #00f2ff88, 0 2px 16px #0003;
-      border: 2px solid #00f2ff;
-      background: #181c2f;
-      transition: box-shadow 0.3s, border-color 0.3s;
-    }
-    .qr-img:hover {
-      box-shadow: 0 0 48px #ffd700cc, 0 2px 16px #0006;
-      border-color: #ffd700;
-    }
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: 0.2rem;
+  font-size: 0.8rem;
+  color: #b873ff;
+}
 
-    .qr-caption {
-      font-size: 1rem;
-      color: #00f2ff;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-shadow: 0 0 8px #00f2ff55;
-      margin-top: 2px;
-    }
+/* QR */
+.qr-section {
+  margin: 2rem 0 1rem 0;
+}
 
-    .buy-btn {
-      background: linear-gradient(90deg, #00f2ff 0%, #ffd700 100%);
-      color: #222;
-      font-weight: bold;
-      padding: 0.85rem 1.7rem;
-      border: none;
-      border-radius: 12px;
-      font-size: 1.08rem;
-      cursor: pointer;
-      margin-top: 1.2rem;
-      box-shadow: 0 2px 12px #00f2ff33;
-      transition: transform 0.2s, box-shadow 0.2s;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 2px 12px #00f2ff33; }
-      50% { box-shadow: 0 0 32px #ffd70066; }
-      100% { box-shadow: 0 2px 12px #00f2ff33; }
-    }
-    .buy-btn:hover {
-      transform: scale(1.06);
-      background: linear-gradient(90deg, #ffd700 0%, #00f2ff 100%);
-      box-shadow: 0 4px 24px #ffd70066;
-    }
+.qr-img {
+  width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px #0008, 0 0 20px rgba(184, 115, 255, 0.4);
+  transition: all 0.3s ease;
+}
 
-    .footer-note {
-      margin-top: 2rem;
-      font-size: 0.92rem;
-      color: #aaa;
-      letter-spacing: 0.2px;
-    }
+.qr-img:hover {
+  box-shadow: 0 0 48px #ffd700cc, 0 4px 18px #0006;
+  transform: scale(1.05);
+}
 
-    @media (max-width: 520px) {
-      .checkout-card {
-        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
-        max-width: 98vw;
-      }
-      .checkout-card h1 { font-size: 1.3rem; }
-      .checkout-card .price { font-size: 1.1rem; }
-      .qr-img { width: 120px; }
-    }
+.qr-caption {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.account-info {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+}
+.account-info span {
+  display: block;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* Nút mua */
+.buy-btn {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to right, #b873ff, #6a0dad);
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(184, 115, 255, 0.4);
+}
+
+.buy-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(184, 115, 255, 0.6);
+}
+
+/* Footer */
+.footer-note {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* Hiệu ứng */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .checkout-card {
+    padding: 1.5rem 1rem;
+    max-width: 95vw;
+  }
+
+  .checkout-card h1 {
+    font-size: 1.4rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  .qr-img {
+    width: 140px;
+  }
+}
+
+/* Chat support */
+.support-chat {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.chat-btn {
+  display: flex;
+  align-items: center;
+  background: #23232a;
+  color: #fff;
+  border: 2px solid #b873ff;
+  padding: 10px 18px 10px 12px;
+  border-radius: 24px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px #00f2ff33;
+  font-size: 1rem;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.chat-btn img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.chat-btn.discord {
+  background: linear-gradient(90deg, #5865F2, #23263a 80%);
+}
+
+.chat-btn:hover {
+  background: #b873ff;
+  color: #181820;
+  transform: translateY(-2px);
+}

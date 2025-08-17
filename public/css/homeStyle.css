@@ -350,10 +350,6 @@ footer {
   background: linear-gradient(90deg, #5865F2, #23263a 80%);
 }
 
-.chat-btn.telegram {
-  background: linear-gradient(90deg, #229ED9, #23263a 80%);
-}
-
 .chat-btn:hover {
   background: #b873ff;
   color: #181820;
@@ -500,6 +496,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+    border: 2px solid #b873ff;
 }
 
 .slide-img-wrapper {
