@@ -393,11 +393,11 @@ footer {
 }
 
 .testimonial-avatar {
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   border: 3px solid #00ffc3;
-  box-shadow: 0 0 8px #00ffc355;
+  box-shadow: 0 0 12px #00ffc355;
   margin-bottom: 1rem;
   object-fit: cover;
 }
@@ -412,6 +412,14 @@ footer {
   color: #ccc;
   font-style: italic;
 }
+.testimonial-rating {
+  color: #FFD700;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+}
+
 
 
 @media (max-width: 768px) {
